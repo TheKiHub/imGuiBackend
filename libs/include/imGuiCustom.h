@@ -10,7 +10,6 @@ The imGuiCustom class provides the functionality to create and render a custom i
 #ifndef IMGUICUSTOM_H
 #define IMGUICUSTOM_H
 
-#include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include <cstdio>

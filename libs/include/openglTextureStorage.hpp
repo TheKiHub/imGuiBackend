@@ -8,8 +8,11 @@
 #include <vector>
 #include <cstdint>
 #include <algorithm>
-#include <GL/gl.h>
 #include <imgui.h>
+#if defined(IMGUI_IMPL_OPENGL_ES2)
+#include <GLES2/gl2.h>
+#endif
+#include <GLFW/glfw3.h>
 
 struct ImTexture {
   ImTextureID TextureID = nullptr;
