@@ -1,0 +1,24 @@
+name: MAC build
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+
+jobs:
+  mac-build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Build project
+        run: |
+          mkdir build
+          cd build
+          cmake ../test
+          cmake --build .
