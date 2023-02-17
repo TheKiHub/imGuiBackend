@@ -6,6 +6,10 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
+#ifndef GL_CLAMP_TO_EDGE
+    #define GL_CLAMP_TO_EDGE			0x812F // if we are using opengl < 1.2
+#endif
+
 // define the global textureStorage
 std::vector<ImTexture> openglTextureStorage::textures{};
 
